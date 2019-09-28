@@ -1,0 +1,17 @@
+@include mediaLg {
+
+}
+
+@include mediaMd {
+
+}
+
+@include mediaSm {
+  .hide-sm {
+    display: none;
+  }
+}
+
+@include mediaVt {
+
+}

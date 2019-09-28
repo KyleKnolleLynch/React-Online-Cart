@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2&display=swap');
+
+/* Global Styles*/
+$primaryColor: #22909e;
+$hoverColor: #16616b;
+$darkColor: #333;
+$lightColor: #f4f4f4;
+$whiteColor: #fff;
+$greyColor: #888;
+$dangerColor: #bb0114;
+$successColor: #15b63a;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: $lightColor;
+  color: $darkColor;
+  overflow: hidden;
+}
+
+a {
+  color: $darkColor;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $primaryColor;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utilities*/
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background: $lightColor;
+  color: $darkColor;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+.btn-link {
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-sm {
+  font-size: 0.8rem;
+  padding: 0.3rem 1rem;
+  margin-right: 0.2rem;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.7rem;
+  text-align: center;
+  margin: 0.3rem;
+  background: $lightColor;
+  color: $darkColor;
+  border-radius: 5px;
+}
+
+.alert {
+  padding: 0.7rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background: $lightColor;
+  color: $darkColor;
+}
+
+.btn-primary,
+.bg-primary,
+.badge-primary,
+.alert-primary {
+  background: $primaryColor;
+  color: $whiteColor;
+}
+
+.btn-light,
+.bg-light,
+.badge-light,
+.alert-light {
+  background: $lightColor;
+  color: $darkColor;
+  border: #ccc solid 1px;
+}
+
+.btn-dark,
+.bg-dark,
+.badge-dark,
+.alert-dark {
+  background: $darkColor;
+  color: $whiteColor;
+}
+
+.btn-danger,
+.bg-danger,
+.badge-danger,
+.alert-danger {
+  background: $dangerColor;
+  color: $whiteColor;
+}
+
+.btn-success,
+.bg-success,
+.badge-success,
+.alert-success {
+  background: $successColor;
+  color: $whiteColor;
+}
+
+.btn-white,
+.bg-white,
+.badge-white,
+.alert-white {
+  background: $whiteColor;
+  color: $darkColor;
+  border: #ccc solid 1px;
+}
+
+.box-shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hover:hover {
+  color: $hoverColor;
+}
+
+/* Text Styles*/
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.large {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-primary {
+  color: $primaryColor;
+}
+
+.text-dark {
+  color: $darkColor;
+}
+
+.text-white {
+  color: $whiteColor;
+}
+
+.text-success {
+  color: $successColor;
+}
+
+.text-danger {
+  color: $dangerColor;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* Center All */
+.all-center {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Cards */
+.card {
+  padding: 1rem;
+  border: #ccc 1px dotted;
+  margin: 0.7rem 0;
+}
+
+/* List */
+.list {
+  margin: 0.5rem 0;
+}
+
+.list-li {
+  padding-bottom: 0.3rem;
+}
+
+/* Padding */
+.p {
+  padding: 0.5rem;
+}
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+.py {
+  padding: 0.5rem 0;
+}
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+
+/* Margin */
+.m {
+  margin: 0.5rem;
+}
+.m-1 {
+  margin: 1rem;
+}
+.m-2 {
+  margin: 2rem;
+}
+.m-3 {
+  margin: 3rem;
+}
+.my {
+  margin: 0.5rem 0;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+.my-2 {
+  margin: 2rem 0;
+}
+.my-3 {
+  margin: 3rem 0;
+}
+
+/* Forms */
+input {
+  margin: 1.2rem 0;
+}
+
+.form-text {
+  display: block;
+  margin-top: 0.3rem;
+  color: $greyColor;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='date'],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+}
+
+input[type='submit'],
+button {
+  font: inherit;
+}
+
+table th,
+table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+table th {
+  background: $lightColor;
+}
+
+/* CSSTransition Group*/
+
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms ease-in;
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 460px) {
+    @content;
+  }
+}
+@mixin mediaMd {
+  @media screen and (max-width: 700px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media screen and (max-width: 960px) {
+    @content;
+  }
+}
+@mixin mediaVt {
+  @media screen and (max-height: 500px) {
+    @content;
+  }
+}
+
+@import 'mobile.scss';

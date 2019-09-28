@@ -1,0 +1,28 @@
+@import '../../sass/config.scss';
+
+.navbar {
+  padding: 0.6rem 2rem;
+  z-index: 1;
+  width: 100%;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    :nth-child(1) {
+      .nav-title {
+        font-size: 1.5rem;
+      }
+      .fa-microchip {
+        margin-right: 4rem;
+      }
+    }
+    :nth-child(2) {
+      text-align: center;
+      p {
+        margin-top: -0.3rem;
+      }
+    }
+  }
+}
