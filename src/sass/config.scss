@@ -160,15 +160,20 @@ img {
   color: $hoverColor;
 }
 
+.transition {
+  transition: all 400ms ease;
+}
+
+
 /* Text Styles*/
 .x-large {
-  font-size: 4rem;
+  font-size: 2rem;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 .large {
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
