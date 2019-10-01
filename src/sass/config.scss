@@ -22,7 +22,7 @@ body {
   line-height: 1.6;
   background-color: $lightColor;
   color: $darkColor;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 a {
@@ -44,7 +44,7 @@ img {
 
 /* Utilities*/
 .container {
-  max-width: 1100px;
+  max-width: 1400px;
   margin: auto;
   padding: 2rem;
 }

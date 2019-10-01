@@ -1,0 +1,19 @@
+@import '../../../sass/config.scss';
+
+.cpu-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  img {
+    grid-column: span 3;
+    height: 10rem;
+    object-fit: cover;
+  }
+  h3, h4 {
+    grid-column: span 3;
+  }
+  h2 {
+    color: $hoverColor;
+  }
+
+}
+
