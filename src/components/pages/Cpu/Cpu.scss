@@ -3,7 +3,8 @@
 .cpu-item {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto auto auto auto 3rem;
+  position: relative;
+  overflow: hidden;
   .img-div {
     grid-column: span 3;
   }
@@ -19,18 +20,26 @@
   }
   h2 {
     grid-column: 1;
+    margin-top: 0.5rem;
     color: $hoverColor;
+    align-self: flex-end;
   }
   button {
-    grid-column: 3;
-    grid-row: 6;
+    position: absolute;
+    bottom: 1rem;
+    right: -0.5rem;
     border-radius: 5px;
     text-transform: uppercase;
-   p {
-    line-height: 1.2;
-    }
+    transform: translate(100%, 100%);
+    transition: all 400ms linear;
+    -webkit-transition: all 400ms linear;
+    -moz-transition: all 400ms linear;
+    -o-transition: all 400ms linear;
     i {
       font-size: 1.4rem;
     }
   }
+}
+.cpu-item:hover button {
+  transform: translate(0, 0);
 }

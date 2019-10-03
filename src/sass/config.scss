@@ -167,7 +167,10 @@ img {
 }
 
 .transition {
-  transition: all 400ms ease;
+  transition: all 400ms ease-in;
+  -webkit-transition: all 400ms ease-in;
+  -moz-transition: all 400ms ease-in;
+  -o-transition: all 400ms ease-in;
 }
 
 /* Text Styles*/
