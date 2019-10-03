@@ -9,7 +9,7 @@ const Navbar = () => {
       <ul>
         <li>
           <span>
-            <i className='fas fa-microchip fa-2x'></i>
+            <i className='fas fa-microchip fa-2x' />
           </span>
           <NavLink to='/' className='hover text-white nav-title transition'>
             CPUs
@@ -19,7 +19,7 @@ const Navbar = () => {
           <NavLink to='/cart' className='hover text-white transition'>
             My Cart{' '}
             <span>
-              <i className='fas fa-cart-arrow-down'></i>
+              <i className='fas fa-shopping-cart' />
             </span>
           </NavLink>
         </li>

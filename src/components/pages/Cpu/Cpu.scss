@@ -3,7 +3,8 @@
 .cpu-item {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  img {
+  grid-template-rows: auto auto auto auto auto 3rem;
+  .img-div {
     grid-column: span 3;
   }
   h3,
@@ -17,7 +18,19 @@
     grid-column: 3;
   }
   h2 {
-    grid-column: span 3;
+    grid-column: 1;
     color: $hoverColor;
+  }
+  button {
+    grid-column: 3;
+    grid-row: 6;
+    border-radius: 5px;
+    text-transform: uppercase;
+   p {
+    line-height: 1.2;
+    }
+    i {
+      font-size: 1.4rem;
+    }
   }
 }
