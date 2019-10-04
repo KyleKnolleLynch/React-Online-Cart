@@ -12,7 +12,7 @@ const CpuList = () => {
       <div className='cpu-list'>
         <ProductConsumer>
            {value => {
-           return value.productsData.map(cpu => <Cpu key={cpu.id} cpu={cpu} />);
+           return value.products.map(cpu => <Cpu key={cpu.id} cpu={cpu} />);
           }}
         </ProductConsumer>
       </div>

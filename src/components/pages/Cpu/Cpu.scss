@@ -31,6 +31,10 @@
     border-radius: 5px;
     text-transform: uppercase;
     transform: translate(100%, 100%);
+    -webkit-transform: translate(100%, 100%);
+    -moz-transform: translate(100%, 100%);
+    -ms-transform: translate(100%, 100%);
+    -o-transform: translate(100%, 100%);
     transition: all 400ms linear;
     -webkit-transition: all 400ms linear;
     -moz-transition: all 400ms linear;
@@ -42,4 +46,8 @@
 }
 .cpu-item:hover button {
   transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
 }

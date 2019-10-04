@@ -1,6 +1,7 @@
 import React from 'react';
+// import { ProductConsumer } from '../../../context/products/ProductContext';
 import { Link } from 'react-router-dom';
-import { ProductConsumer } from '../../../context/products/ProductContext';
+import PropTypes from 'prop-types';
 
 import './Cpu.scss';
 
@@ -50,5 +51,19 @@ const Cpu = ({
     </div>
   );
 };
+
+Cpu.propTypes = {
+  cpu: PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    category: PropTypes.string,
+    manufacturer: PropTypes.string,
+    img: PropTypes.string,
+    price: PropTypes.number,
+    info: PropTypes.string,
+    coolingSolution: PropTypes.string,
+    inCart: PropTypes.bool
+  }).isRequired
+}
 
 export default Cpu;

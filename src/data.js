@@ -98,7 +98,7 @@ export const productDetails = {
   title: 'Ryzen 7 3700X',
   category: 'Desktop CPU',
   manufacturer: 'AMD',
-  img: './images/3700X.png',
+  img: './images/3700X.jpg',
   price: 329.99,
   info: '8-Core, 16-Thread, 3.6 GHz (4.4 GHz Max Boost) Socket AM4 65W',
   inCart: false,

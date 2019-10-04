@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ProductProvider } from './context/products/ProductContext';
 import Navbar from './components/layout/Navbar';
 import CpuList from './components/pages/CpuList/CpuList';
-import CpuDetails from './components/pages/CpuDetails';
+import CpuDetails from './components/pages/CpuDetails/CpuDetails';
 import Cart from './components/pages/Cart';
 import NotFound from './components/pages/NotFound';
 

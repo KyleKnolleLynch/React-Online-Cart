@@ -29,7 +29,7 @@ a {
 }
 
 a:hover {
-  color: $primaryColor;
+  opacity: 0.8;
 }
 
 ul {
@@ -238,7 +238,7 @@ img {
 .card {
   padding: 1rem;
   border: #ccc 1px dotted;
-  margin: 0.7rem 0;
+  margin: 0.7rem auto;
 }
 
 /* List */
