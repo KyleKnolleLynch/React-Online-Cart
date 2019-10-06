@@ -15,7 +15,7 @@ const App = () => {
       <Router>
         <Fragment>
           <Navbar />
-          <div className='container'>
+          <div className='container' style={{paddingTop: '5rem'}}>
             <Switch>
               <Route exact path='/' component={CpuList} />
               <Route exact path='/cpuDetails' component={CpuDetails} />

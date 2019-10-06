@@ -6,6 +6,7 @@ $lightColor: #f4f4f4;
 $whiteColor: #fff;
 $greyColor: #888;
 $dangerColor: #bb0114;
+$warningColor: rgb(255, 153, 0);
 $successColor: #15b63a;
 
 * {
@@ -51,7 +52,7 @@ img {
   display: inline-block;
   background: $lightColor;
   color: $darkColor;
-  padding: 0.4rem 1.3rem;
+  padding: 0.4rem 1rem;
   font-size: 1rem;
   border: none;
   cursor: pointer;
@@ -141,6 +142,14 @@ img {
   color: $whiteColor;
 }
 
+.btn-warning,
+.bg-warning,
+.badge-warning,
+.alert-warning {
+  background: $warningColor;
+  color: $whiteColor;
+}
+
 .btn-success,
 .bg-success,
 .badge-success,
@@ -211,6 +220,10 @@ img {
   color: $dangerColor;
 }
 
+.text-warning {
+  color: $warningColor;
+}
+
 .text-center {
   text-align: center;
 }
@@ -232,6 +245,19 @@ img {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+/* Grids */
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
 }
 
 /* Cards */

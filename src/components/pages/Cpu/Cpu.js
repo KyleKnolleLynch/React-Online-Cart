@@ -41,9 +41,9 @@ const Cpu = ({
         onClick={() => console.log('added to cart')}
       >
         {inCart ? (
-          <p className='text-success' disabled>
+          <span className='text-success'>
             In Cart
-          </p>
+          </span>
         ) : (
           <i className='fas fa-cart-arrow-down btn-block' />
         )}

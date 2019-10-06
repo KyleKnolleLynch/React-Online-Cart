@@ -19,15 +19,16 @@ class ProductProvider extends Component {
       const singleItem = { ...item };
       products = [...products, singleItem];
     });
-    this.setState({ products });
+    this.setState(() => {
+    return { products }});
   };
 
   handleDetail = () => {
-    console.log('hello from detail');
+    console.log('hello from handle details');
   };
 
-  addToCart = () => {
-    console.log('hello from add to cart');
+  addToCart = (id) => {
+    console.log(`Item id is: ${id}`);
   };
 
   render() {

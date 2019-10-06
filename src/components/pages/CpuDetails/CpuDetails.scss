@@ -1,2 +1,23 @@
-@import '../../../sass/config.scss'; 
+@import '../../../sass/config.scss';
 
+.details-card {
+  width: 60vw;
+  align-items: center;
+    img {
+      max-width: 500px;
+    }
+  button {
+    width: 7rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
+  :nth-child(6) {
+    margin-bottom: 2rem;
+  }
+  :nth-child(7) {
+    margin: 0;
+  }
+  :nth-child(8) {
+    margin-bottom: 5rem;
+  }
+}

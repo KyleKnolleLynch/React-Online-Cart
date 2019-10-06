@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { ProductConsumer } from '../../../context/products/ProductContext';
 import { Link } from 'react-router-dom';
+import Title from '../Title';
 
 import './CpuDetails.scss';
 
@@ -20,51 +21,55 @@ const CpuDetails = () => {
           count,
           total
         } = value.productDetails;
+        const { addToCart } = value;
 
         return (
-          <div
-            className='card bg-white details-card text-center box-shadow'
-            style={{ width: '60vw' }}
-          >
-            <img src={img} alt='cpu-item' />
-            <h1>
-              {manufacturer} {title}
-            </h1>
-            <h2>{category}</h2>
-            <p className='lead m'>{info}</p>
-            <p>
-              Additional Info: Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit. Nobis cum dolorum ab velit, deleniti reiciendis
-              distinctio qui praesentium mollitia fuga voluptatum aspernatur
-              quisquam atque quibusdam?
-            </p>
-            <h3 className='my-2'>Price: ${price}</h3>
-            <h4>Items in cart: {count}</h4>
-            <h3>
-              Cart Total:{' '}
-              {inCart ? (
-                <span className='text-danger'>${total}</span>
-              ) : (
-                <span className='text-success'>${total}</span>
-              )}{' '}
-            </h3>
-            <button
-              className='btn btn-primary m-1 box-shadow'
-              style={{ width: '7rem' }}
-            >
-              <Link to='./' className='text-white'>
-              To Cpus
-              </Link>
-            </button>
-            <button
-              className='btn btn-success m-1 box-shadow'
-              style={{ width: '7rem' }}
-            >
-              <Link to='./cart' className='text-white'>
-              Add Item
-              </Link>
-            </button>
-          </div>
+          <Fragment>
+            <Title name={manufacturer} title={title} />
+            <div className='card bg-white box-shadow grid-2 details-card'>
+              <div>
+                <img src={img} alt='cpu-item' />
+              </div>
+              <div>
+                <p className='lead'>{info}</p>
+                <h4>{category}</h4>
+                <p className='m'>
+                  Additional Info: Lorem ipsum dolor sit amet, consectetur
+                  adipisicing elit. Nobis cum dolorum ab velit, deleniti
+                  reiciendis distinctio qui praesentium mollitia fuga voluptatum
+                  aspernatur quisquam atque quibusdam?
+                </p>
+                <h3 className='my-2'>Price: ${price}</h3>
+                <h4>Items in cart: {count}</h4>
+                <h3>
+                  Cart Total:{' '}
+                  {inCart ? (
+                    <span className='text-danger'>${total}</span>
+                  ) : (
+                    <span className='text-success'>${total}</span>
+                  )}
+                </h3>
+                <button
+                  className={
+                    inCart
+                      ? 'btn btn-danger m-1 box-shadow'
+                      : 'btn btn-success m-1 box-shadow'
+                  }
+                  disabled={inCart ? true : false}
+                  onClick={() => addToCart(id)}
+                >
+                  {inCart ? 'In Cart' : 'Add Item'}
+                </button>
+                <button
+                  className='btn btn-primary m-1 box-shadow'
+                >
+                  <Link to='./' className='text-white'>
+                    To Cpus
+                  </Link>
+                </button>
+              </div>
+            </div>
+          </Fragment>
         );
       }}
     </ProductConsumer>
