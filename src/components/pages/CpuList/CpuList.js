@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProductConsumer } from '../../../context/products/ProductContext';
-import Title from '../Title';
+import Title from '../../layout/Title';
 import Cpu from '../Cpu/Cpu';
 
 import './CpuList.scss';

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { ProductConsumer } from '../../../context/products/ProductContext';
 import { Link } from 'react-router-dom';
-import Title from '../Title';
+import Title from '../../layout/Title';
 
 import './CpuDetails.scss';
 
@@ -21,7 +21,7 @@ const CpuDetails = () => {
           count,
           total
         } = value.productDetails;
-        const { addToCart } = value;
+        const { addToCart, openModal } = value;
 
         return (
           <Fragment>
@@ -44,19 +44,22 @@ const CpuDetails = () => {
                 <h3>
                   Cart Total:{' '}
                   {inCart ? (
-                    <span className='text-danger'>${total}</span>
-                  ) : (
                     <span className='text-success'>${total}</span>
+                  ) : (
+                    <span className='text-warning'>${total}</span>
                   )}
                 </h3>
                 <button
                   className={
                     inCart
-                      ? 'btn btn-danger m-1 box-shadow'
-                      : 'btn btn-success m-1 box-shadow'
+                      ? 'btn btn-success m-1 box-shadow'
+                      : 'btn btn-warning m-1 box-shadow'
                   }
                   disabled={inCart ? true : false}
-                  onClick={() => addToCart(id)}
+                  onClick={() => {
+                    addToCart(id);
+                    openModal(id);
+                  }}
                 >
                   {inCart ? 'In Cart' : 'Add Item'}
                 </button>

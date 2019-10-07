@@ -30,8 +30,8 @@ export const productsData = [
     price: 494.99,
     info:
       '8-Core, 16-Thread, 3.6 GHz (5.0 GHz Turbo) LGA 1151 (300 Series) 95W Intel UHD Graphics 630',
-      coolingSolution: 'No cooling solution included',
-      inCart: false
+    coolingSolution: 'No cooling solution included',
+    inCart: false
   },
   {
     id: 4,
@@ -42,8 +42,8 @@ export const productsData = [
     price: 364.99,
     info:
       '8-Core, 8-Thread, 3.6 GHz (4.9 GHz Turbo) LGA 1151 (300 Series) 95W Intel UHD Graphics 630',
-      coolingSolution: 'No cooling solution included',
-      inCart: false
+    coolingSolution: 'No cooling solution included',
+    inCart: false
   },
   {
     id: 5,
@@ -65,8 +65,8 @@ export const productsData = [
     price: 354.99,
     info:
       '6-Core, 12-Thread, 3.7 GHz (4.7 GHz Turbo) LGA 1151 (300 Series) 95W Intel UHD Graphics 630',
-      coolingSolution: 'No cooling solution included',
-      inCart: false
+    coolingSolution: 'No cooling solution included',
+    inCart: false
   },
   {
     id: 7,
@@ -88,20 +88,9 @@ export const productsData = [
     price: 239.99,
     info:
       '6-Core, 6-Thread, 3.7 GHz (4.6 GHz Turbo) LGA 1151 (300 Series) 95W Intel UHD Graphics 630',
-      coolingSolution: 'No cooling solution included',
-      inCart: false
+    coolingSolution: 'No cooling solution included',
+    inCart: false
   }
 ];
 
-export const productDetails = {
-  id: 1,
-  title: 'Ryzen 7 3700X',
-  category: 'Desktop CPU',
-  manufacturer: 'AMD',
-  img: './images/3700X.jpg',
-  price: 329.99,
-  info: '8-Core, 16-Thread, 3.6 GHz (4.4 GHz Max Boost) Socket AM4 65W',
-  inCart: false,
-  count: 0,
-  total: 0
-};
+export const productDetails = {};
