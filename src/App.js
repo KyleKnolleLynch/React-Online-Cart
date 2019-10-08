@@ -6,7 +6,7 @@ import Navbar from './components/layout/Navbar';
 import CpuList from './components/pages/CpuList/CpuList';
 import CpuDetails from './components/pages/CpuDetails/CpuDetails';
 import Cart from './components/pages/Cart';
-import Modal from './components/Modal';
+import Modal from './components/modal/Modal';
 import NotFound from './components/pages/NotFound';
 
 import './sass/config.scss';

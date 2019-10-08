@@ -19,14 +19,15 @@ const CpuDetails = () => {
           info,
           inCart,
           count,
-          total
+          total,
+          additionalInfo
         } = value.productDetails;
         const { addToCart, openModal } = value;
 
         return (
           <Fragment>
             <Title name={manufacturer} title={title} />
-            <div className='card bg-white box-shadow grid-2 details-card'>
+            <div className='grid-2 details-card'>
               <div>
                 <img src={img} alt='cpu-item' />
               </div>
@@ -34,12 +35,9 @@ const CpuDetails = () => {
                 <p className='lead'>{info}</p>
                 <h4>{category}</h4>
                 <p className='m'>
-                  Additional Info: Lorem ipsum dolor sit amet, consectetur
-                  adipisicing elit. Nobis cum dolorum ab velit, deleniti
-                  reiciendis distinctio qui praesentium mollitia fuga voluptatum
-                  aspernatur quisquam atque quibusdam?
+                 {additionalInfo}
                 </p>
-                <h3 className='my-2'>Price: ${price}</h3>
+                <h3 className='my-2'>Price: <span>${price}</span></h3>
                 <h4>Items in cart: {count}</h4>
                 <h3>
                   Cart Total:{' '}

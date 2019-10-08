@@ -1,8 +1,0 @@
-@import '../../../sass/config.scss';
-
-.cpu-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 18rem));
-  grid-gap: 1rem;
-  justify-content: center;
-}

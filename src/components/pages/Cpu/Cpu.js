@@ -25,13 +25,12 @@ const Cpu = ({
           <div
             className='img-div text-center'
             onClick={() => {
-               value.handleDetail(id);
-               value.openModal(id);
+              value.handleDetail(id);
             }}
           >
-            <Link to='/CpuDetails'>
+            <Link to='/CpuDetails' className='transition'>
               <img src={img} alt='cpu-item' />
-              <h6 className='transition'>
+              <h6 className='hover'>
                 <em>(click image for details)</em>
               </h6>
             </Link>
@@ -46,7 +45,10 @@ const Cpu = ({
           <button
             className='btn btn-grey card-btn'
             disabled={inCart ? true : false}
-            onClick={() => value.addToCart(id)}
+            onClick={() => {
+              value.addToCart(id);
+              value.openModal(id);
+            }}
           >
             {inCart ? (
               <span className='text-success'>In Cart</span>

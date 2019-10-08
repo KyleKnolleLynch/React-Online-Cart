@@ -3,13 +3,17 @@
 .details-card {
   width: 60vw;
   align-items: center;
-    img {
-      max-width: 500px;
-    }
+  margin: 0.7rem auto;
+  img {
+    max-width: 500px;
+  }
   button {
     width: 7rem;
     border-radius: 5px;
     text-transform: uppercase;
+  }
+  :nth-child(4) span {
+    color: $hoverColor;
   }
   :nth-child(6) {
     margin-bottom: 2rem;
