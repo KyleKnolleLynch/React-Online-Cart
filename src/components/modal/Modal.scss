@@ -1,0 +1,30 @@
+@import '../../sass/config.scss';
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  .modal-card {
+    width: 35vw;
+    max-width: 20rem;
+    img {
+      max-width: 200px;
+    }
+    span {
+      color: #16616b;
+    }
+    :nth-child(6) {
+      margin: 0 3rem;
+      :nth-child(1) {
+        border: 2px solid #ff9900;
+        border-radius: 5px;
+      }
+      :nth-child(2) {
+        border: 2px solid #22909e;
+        border-radius: 5px;
+      }
+    }
+  }
+}

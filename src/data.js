@@ -8,7 +8,7 @@ export const productsData = [
     price: 329.99,
     info: '8-Core, 16-Thread, 3.6 GHz (4.4 GHz Max Boost) Socket AM4 65W',
     coolingSolution: 'Wraith Prizm Cooler included',
-    inCart: true,
+    inCart: false,
     additionalInfo: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores possimus soluta doloremque quas, ea veritatis similique minus laboriosam.'
   },
   {

@@ -43,7 +43,7 @@ const Cpu = ({
           <h5>{coolingSolution}</h5>
           <h2>${price}</h2>
           <button
-            className='btn btn-grey card-btn'
+            className='btn btn-grey card-btn tu'
             disabled={inCart ? true : false}
             onClick={() => {
               value.addToCart(id);

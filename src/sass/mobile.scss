@@ -9,6 +9,9 @@
 }
 
 @include mediaMd {
+  .hide-md {
+    display: none;
+  }
   .title {
     font-size: 1.2rem;
   }
@@ -18,11 +21,24 @@
       width: 100%;
     }
   }
+  .modal-container .modal-card {
+    width: 70vw;
+    :nth-child(6) {
+      :nth-child(n) {
+        font-size: 0.8rem;
+      }
+    }
+  }
 }
 
 @include mediaSm {
   .hide-sm {
     display: none;
+  }
+  .modal-container .modal-card {
+    :nth-child(6) {
+      margin: 0;
+    }
   }
 }
 

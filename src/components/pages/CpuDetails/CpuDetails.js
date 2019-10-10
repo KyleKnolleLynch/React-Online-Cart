@@ -50,8 +50,8 @@ const CpuDetails = () => {
                 <button
                   className={
                     inCart
-                      ? 'btn btn-success m-1 box-shadow'
-                      : 'btn btn-warning m-1 box-shadow'
+                      ? 'btn btn-success m-1 box-shadow tu'
+                      : 'btn btn-warning m-1 box-shadow tu'
                   }
                   disabled={inCart ? true : false}
                   onClick={() => {
@@ -62,7 +62,7 @@ const CpuDetails = () => {
                   {inCart ? 'In Cart' : 'Add Item'}
                 </button>
                 <button
-                  className='btn btn-primary m-1 box-shadow'
+                  className='btn btn-primary m-1 box-shadow tu'
                 >
                   <Link to='./' className='text-white'>
                     To Cpus
