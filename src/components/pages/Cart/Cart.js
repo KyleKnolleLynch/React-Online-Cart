@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import Title from '../../layout/Title';
 import CartColumns from './CartColumns';
 import EmptyCart from './EmptyCart';
+import CartList from './CartList';
 import { ProductConsumer } from '../../../context/products/ProductContext';
 
 const Cart = () => {
@@ -15,6 +16,7 @@ const Cart = () => {
               <Fragment>
                 <Title name='Your' title='Cart' />
                 <CartColumns />
+                <CartList value={value} />
               </Fragment>
             );
           } else {

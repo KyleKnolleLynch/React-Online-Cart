@@ -7,7 +7,7 @@ const CartColumns = () => {
       <p className='tu'>name of product</p>
       <p className='tu'>price</p>
       <p className='tu'>quantity</p>
-      <p className='tu fas fa-trash-alt btn'></p>
+      <p className='tu'>remove item</p>
       <p className='tu'>total</p>
     </div>
   )

@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 const EmptyCart = () => {
   return (
     <Fragment>
-      <h1 className='text-large'>Your Cart is Currently <span className='text-primary'>Empty</span></h1>
+      <h1 className='text-large' style={{ textAlign: 'center'}}>Cart is Currently Empty</h1>
     </Fragment>
   )
 }

@@ -29,6 +29,16 @@
       }
     }
   }
+  .cart-item {
+    font-size: 0.8rem;
+    grid-gap: 0.5rem;
+    button {
+      font-size: 0.7rem;
+    }
+    i {
+      font-size: 0.8rem;
+    }
+  }
 }
 
 @include mediaSm {

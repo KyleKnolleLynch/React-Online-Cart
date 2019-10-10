@@ -9,6 +9,8 @@ export const productsData = [
     info: '8-Core, 16-Thread, 3.6 GHz (4.4 GHz Max Boost) Socket AM4 65W',
     coolingSolution: 'Wraith Prizm Cooler included',
     inCart: false,
+    count: 0,
+    total: 0,
     additionalInfo: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores possimus soluta doloremque quas, ea veritatis similique minus laboriosam.'
   },
   {
@@ -21,6 +23,8 @@ export const productsData = [
     info: '8-Core, 16-Thread, 3.9 GHz (4.5 GHz Max Boost) Socket AM4 105W',
     coolingSolution: 'Wraith Prizm Cooler included',
     inCart: false,
+    count: 0,
+    total: 0,
     additionalInfo: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores possimus soluta doloremque quas, ea veritatis similique minus laboriosam.'
   },
   {
@@ -34,6 +38,8 @@ export const productsData = [
       '8-Core, 16-Thread, 3.6 GHz (5.0 GHz Turbo) LGA 1151 (300 Series) 95W Intel UHD Graphics 630',
     coolingSolution: 'No cooling solution included',
     inCart: false,
+    count: 0,
+    total: 0,
     additionalInfo: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores possimus soluta doloremque quas, ea veritatis similique minus laboriosam.'
   },
   {
@@ -47,6 +53,8 @@ export const productsData = [
       '8-Core, 8-Thread, 3.6 GHz (4.9 GHz Turbo) LGA 1151 (300 Series) 95W Intel UHD Graphics 630',
     coolingSolution: 'No cooling solution included',
     inCart: false,
+    count: 0,
+    total: 0,
     additionalInfo: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores possimus soluta doloremque quas, ea veritatis similique minus laboriosam.'
   },
   {
@@ -59,6 +67,8 @@ export const productsData = [
     info: '6-Core, 12-Thread, 3.6 GHz (4.2 GHz Max Boost) Socket AM4 95W',
     coolingSolution: 'Wraith Spire Cooler included',
     inCart: false,
+    count: 0,
+    total: 0,
     additionalInfo: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores possimus soluta doloremque quas, ea veritatis similique minus laboriosam.'
   },
   {
@@ -72,6 +82,8 @@ export const productsData = [
       '6-Core, 12-Thread, 3.7 GHz (4.7 GHz Turbo) LGA 1151 (300 Series) 95W Intel UHD Graphics 630',
     coolingSolution: 'No cooling solution included',
     inCart: false,
+    count: 0,
+    total: 0,
     additionalInfo: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores possimus soluta doloremque quas, ea veritatis similique minus laboriosam.'
   },
   {
@@ -84,6 +96,8 @@ export const productsData = [
     info: '8-Core, 16-Thread, 3.2 GHz (4.1 GHz Max Boost) Socket AM4 65W',
     coolingSolution: 'Wraith Spire Cooler included',
     inCart: false,
+    count: 0,
+    total: 0,
     additionalInfo: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores possimus soluta doloremque quas, ea veritatis similique minus laboriosam.'
   },
   {
@@ -97,6 +111,8 @@ export const productsData = [
       '6-Core, 6-Thread, 3.7 GHz (4.6 GHz Turbo) LGA 1151 (300 Series) 95W Intel UHD Graphics 630',
     coolingSolution: 'No cooling solution included',
     inCart: false,
+    count: 0,
+    total: 0,
     additionalInfo: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In asperiores possimus soluta doloremque quas, ea veritatis similique minus laboriosam.'
   }
 ];
