@@ -82,6 +82,11 @@ img {
   opacity: 0.8;
 }
 
+.btn-alt-danger:hover {
+  background: $dangerColor;
+  color: $whiteColor;
+}
+
 .badge {
   display: inline-block;
   font-size: 0.8rem;
@@ -173,6 +178,12 @@ img {
 
 .hover:hover {
   color: $hoverColor;
+}
+
+.hover-dark:hover {
+  background: $darkColor;
+  color: $whiteColor;
+  opacity: 1;
 }
 
 .transition {

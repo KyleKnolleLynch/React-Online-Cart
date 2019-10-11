@@ -3,6 +3,7 @@ import Title from '../../layout/Title';
 import CartColumns from './CartColumns';
 import EmptyCart from './EmptyCart';
 import CartList from './CartList';
+import CartTotals from './CartTotals';
 import { ProductConsumer } from '../../../context/products/ProductContext';
 
 const Cart = () => {
@@ -17,6 +18,7 @@ const Cart = () => {
                 <Title name='Your' title='Cart' />
                 <CartColumns />
                 <CartList value={value} />
+                <CartTotals value={value} />
               </Fragment>
             );
           } else {

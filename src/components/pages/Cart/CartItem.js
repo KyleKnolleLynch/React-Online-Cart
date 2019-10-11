@@ -2,10 +2,10 @@ import React from 'react';
 
 const CartItem = ({ item, value }) => {
   const { id, img, title, price, count, total } = item;
-  const { increment, decrement } = value;
+  const { increment, decrement, removeItem } = value;
   return (
     <div className='grid-6 my-2 cart-item'>
-      <div className='hide-sm'>
+      <div>
         <img src={img} alt='cpu-item' />
       </div>
       <div>
@@ -15,21 +15,29 @@ const CartItem = ({ item, value }) => {
         <p>${price}</p>
       </div>
       <div style={styles.buttonDiv}>
-        <button className='btn' style={styles.buttonStyle} onClick={decrement}>
+        <button
+          className='btn hover-dark'
+          style={styles.buttonStyle}
+          onClick={() => decrement(id)}
+        >
           <i className='fas fa-minus' />
         </button>
         <button className='btn' style={styles.countStyle}>
           <p>{count}</p>
         </button>
-        <button className='btn' style={styles.buttonStyle} onClick={increment}>
+        <button
+          className='btn hover-dark'
+          style={styles.buttonStyle}
+          onClick={() => increment(id)}
+        >
           <i className='fas fa-plus' />
         </button>
       </div>
-      <div>
-        <i className='fas fa-trash-alt btn' />
+      <div onClick={() => removeItem(id)}>
+        <i className='fas fa-trash-alt btn text-danger' />
       </div>
       <div>
-        <p>{total}</p>
+        <strong>${total}</strong>
       </div>
     </div>
   );

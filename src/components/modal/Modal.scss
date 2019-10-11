@@ -18,13 +18,22 @@
     :nth-child(6) {
       margin: 0 3rem;
       :nth-child(1) {
-        border: 2px solid #ff9900;
+        border: 2px solid $warningColor;
         border-radius: 5px;
       }
+      :nth-child(1):hover {
+        background: $warningColor;
+        color: $whiteColor;
+      } 
       :nth-child(2) {
-        border: 2px solid #22909e;
+        border: 2px solid $primaryColor;
         border-radius: 5px;
       }
+      :nth-child(2):hover {
+        background: $primaryColor;
+        color: $whiteColor;
+      } 
     }
+   
   }
 }

@@ -7,7 +7,7 @@ class ProductProvider extends Component {
   state = {
     products: [],
     productDetails,
-    cart: productsData,
+    cart: [],
     modalOpen: false,
     modalProduct: productDetails,
     cartSubtotal: 0,
@@ -56,7 +56,7 @@ class ProductProvider extends Component {
         return { products: tempProducts, cart: [...this.state.cart, product] };
       },
       () => {
-        console.log(this.state);
+        this.addTotals();
       }
     );
   };
@@ -70,25 +70,42 @@ class ProductProvider extends Component {
 
   closeModal = () => {
     this.setState(() => {
-      return { modalOpen: false}
-    })
-  }
+      return { modalOpen: false };
+    });
+  };
 
   increment = id => {
-    console.log('hello from increment method');
-  }
+    const product = this.getItem(id);
+    const productInc = product.count + 1;
+    this.setState(() => {
+      return { cart: productInc };
+    });
+  };
 
   decrement = id => {
     console.log('hello from decrement method');
-  }
+  };
 
   removeItem = id => {
     console.log('item removed');
-  }
+  };
 
   clearCart = () => {
-    console.log('cart was cleared');
-  }
+    this.setState(() => {
+      return { cart: [] };
+    });
+  };
+
+  addTotals = () => {
+    let subtotal = 0;
+    this.state.cart.map(item => (subtotal += item.total));
+    const tempTax = subtotal * 0.08;
+    const tax = parseInt(tempTax.toFixed(2));
+    const total = subtotal + tax;
+    this.setState(() => {
+      return { cartSubtotal: subtotal, cartTax: tax, cartTotal: total };
+    });
+  };
 
   render() {
     return (
