@@ -44,7 +44,7 @@ const Cpu = ({
           <h2>${price}</h2>
           <button
             className='btn btn-grey card-btn tu'
-            disabled={inCart ? true : false}
+            disabled={inCart}
             onClick={() => {
               value.addToCart(id);
               value.openModal(id);

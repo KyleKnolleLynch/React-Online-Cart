@@ -75,11 +75,7 @@ class ProductProvider extends Component {
   };
 
   increment = id => {
-    const product = this.getItem(id);
-    const productInc = product.count + 1;
-    this.setState(() => {
-      return { cart: productInc };
-    });
+    console.log('hello from increment method');
   };
 
   decrement = id => {
@@ -87,23 +83,44 @@ class ProductProvider extends Component {
   };
 
   removeItem = id => {
-    console.log('item removed');
+    const tempCart = this.state.cart.filter(item => item.id !== id);
+    let tempProducts = [...this.state.products];
+    const index = tempProducts.indexOf(this.getItem(id));
+    let product = tempProducts[index];
+    product.inCart = false;
+    product.count = 0;
+    product.total = 0;
+    this.setState(() => {
+      return { cart: tempCart, products: tempProducts };
+    }, () => {
+      this.addTotals();
+    });
   };
 
   clearCart = () => {
-    this.setState(() => {
-      return { cart: [] };
-    });
+    this.setState(
+      () => {
+        return { cart: [] };
+      },
+      () => {
+        this.setProducts();
+        this.addTotals();
+      }
+    );
   };
 
   addTotals = () => {
     let subtotal = 0;
     this.state.cart.map(item => (subtotal += item.total));
     const tempTax = subtotal * 0.08;
-    const tax = parseInt(tempTax.toFixed(2));
+    const tax = parseFloat(tempTax.toFixed(2));
     const total = subtotal + tax;
     this.setState(() => {
-      return { cartSubtotal: subtotal, cartTax: tax, cartTotal: total };
+      return {
+        cartSubtotal: subtotal.toFixed(2),
+        cartTax: tax,
+        cartTotal: total.toFixed(2)
+      };
     });
   };
 
