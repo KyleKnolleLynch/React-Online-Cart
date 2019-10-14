@@ -5,7 +5,7 @@ const CartTotals = ({ value }) => {
   const { cartSubtotal, cartTax, cartTotal, clearCart } = value;
 
   return (
-    <div className='text-right'>
+    <div className='text-right cart-totals'>
       <Link to='/'>
         <button
           className='btn text-danger btn-alt-danger tu'

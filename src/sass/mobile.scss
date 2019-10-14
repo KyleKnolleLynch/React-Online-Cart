@@ -39,6 +39,9 @@
       font-size: 0.8rem;
     }
   }
+  .cart-totals :nth-child(n) {
+    font-size: 0.8rem;
+  }
 }
 
 @include mediaSm {
