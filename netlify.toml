@@ -1,0 +1,7 @@
+[build] 
+  publish="build"
+
+  [[redirects]]
+  from = "/*"
+  to = "/NotFound.js"
+  status = 200
