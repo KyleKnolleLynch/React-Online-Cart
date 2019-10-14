@@ -3,5 +3,5 @@
 
   [[redirects]]
   from = "/*"
-  to = "/NotFound.js"
+  to = "/index.html"
   status = 200
