@@ -1,5 +1,6 @@
 #  React Online Shopping Cart
 
-*  React Router
 *  Context API
+*  React Router
 *  Sass
+*  React Paypal Express Checkout
