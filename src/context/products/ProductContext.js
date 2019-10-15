@@ -151,9 +151,9 @@ class ProductProvider extends Component {
     const total = subtotal + tax;
     this.setState(() => {
       return {
-        cartSubtotal: subtotal.toFixed(2),
+        cartSubtotal: parseFloat(subtotal.toFixed(2)),
         cartTax: tax,
-        cartTotal: total.toFixed(2)
+        cartTotal: parseFloat(total.toFixed(2))
       };
     });
   };

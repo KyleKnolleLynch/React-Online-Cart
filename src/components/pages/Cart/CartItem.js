@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const CartItem = ({ item, value }) => {
   const { id, img, title, price, count, total } = item;
@@ -57,6 +58,22 @@ const styles = {
     padding: '0.2rem 0.5rem',
     cursor: 'initial'
   }
+};
+
+CartItem.propTypes = {
+  item: PropTypes.shape({
+    id: PropTypes.number,
+    img: PropTypes.string,
+    title: PropTypes.string,
+    price: PropTypes.number,
+    count: PropTypes.number,
+    total: PropTypes.number
+  }),
+  value: PropTypes.shape({
+    increment: PropTypes.func,
+    decrement: PropTypes.func,
+    removeItem: PropTypes.func
+  })
 };
 
 export default CartItem;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import PaypalExpressBtn from 'react-paypal-express-checkout';
 
 class PaypalButton extends Component {
@@ -52,6 +53,12 @@ class PaypalButton extends Component {
       />
     );
   }
+}
+
+PaypalButton.propTypes = {
+  clearCart: PropTypes.func,
+  history: PropTypes.object,
+  total: PropTypes.number
 }
 
 export default PaypalButton;

@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import Title from '../../layout/Title';
 import CartColumns from './CartColumns';
 import EmptyCart from './EmptyCart';
@@ -6,7 +7,7 @@ import CartList from './CartList';
 import CartTotals from './CartTotals';
 import { ProductConsumer } from '../../../context/products/ProductContext';
 
-const Cart = props => {
+const Cart = ({ history }) => {
   return (
     <Fragment>
       <ProductConsumer>
@@ -18,7 +19,7 @@ const Cart = props => {
                 <Title name='Your' title='Cart' />
                 <CartColumns />
                 <CartList value={value} />
-                <CartTotals value={value} history={props.history} />
+                <CartTotals value={value} history={history} />
               </Fragment>
             );
           } else {
@@ -34,5 +35,9 @@ const Cart = props => {
     </Fragment>
   );
 };
+
+Cart.propTypes = {
+  history: PropTypes.object
+}
 
 export default Cart;

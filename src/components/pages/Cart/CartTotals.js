@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import PaypalButton from '../../PaypalButton';
 
@@ -40,5 +41,15 @@ const styles = {
     marginBottom: '4rem'
   }
 };
+
+CartTotals.propTypes = {
+  value: PropTypes.shape({
+    cartSubtotal: PropTypes.number,
+    cartTax: PropTypes.number,
+    cartTotal: PropTypes.number,
+    clearCart: PropTypes.func
+  }),
+  history: PropTypes.object
+}
 
 export default CartTotals;
