@@ -31,8 +31,7 @@ class ProductProvider extends Component {
   };
 
   getItem = id => {
-    const product = this.state.products.find(item => item.id === id);
-    return product;
+    return this.state.products.find(item => item.id === id);
   };
 
   handleDetail = id => {
@@ -45,7 +44,7 @@ class ProductProvider extends Component {
   addToCart = id => {
     let tempProducts = [...this.state.products];
     const index = tempProducts.indexOf(this.getItem(id));
-    const product = tempProducts[index];
+    let product = tempProducts[index];
     product.inCart = true;
     product.count = 1;
     const price = product.price;
@@ -61,24 +60,17 @@ class ProductProvider extends Component {
     );
   };
 
-  openModal = id => {
+  toggleModal = id => {
     const product = this.getItem(id);
     this.setState(() => {
-      return { modalProduct: product, modalOpen: true };
-    });
-  };
-
-  closeModal = () => {
-    this.setState(() => {
-      return { modalOpen: false };
+      return { modalProduct: product, modalOpen: !this.state.modalOpen };
     });
   };
 
   increment = id => {
     let tempCart = [...this.state.cart];
-    const cpuItem = tempCart.find(item => item.id === id);
-    const index = tempCart.indexOf(cpuItem);
-    const product = tempCart[index];
+    const index = tempCart.indexOf(this.getItem(id));
+    let product = tempCart[index];
     product.count = product.count + 1;
     product.total = product.count * product.price;
 
@@ -94,9 +86,8 @@ class ProductProvider extends Component {
 
   decrement = id => {
     let tempCart = [...this.state.cart];
-    const cpuItem = tempCart.find(item => item.id === id);
-    const index = tempCart.indexOf(cpuItem);
-    const product = tempCart[index];
+    const index = tempCart.indexOf(this.getItem(id));
+    let product = tempCart[index];
     product.count = product.count - 1;
     if (product.count < 1) {
       return this.removeItem(id);
@@ -165,8 +156,7 @@ class ProductProvider extends Component {
           ...this.state,
           handleDetail: this.handleDetail,
           addToCart: this.addToCart,
-          openModal: this.openModal,
-          closeModal: this.closeModal,
+          toggleModal: this.toggleModal,
           increment: this.increment,
           decrement: this.decrement,
           removeItem: this.removeItem,

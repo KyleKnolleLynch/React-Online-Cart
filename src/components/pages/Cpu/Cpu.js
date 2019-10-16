@@ -47,7 +47,7 @@ const Cpu = ({
             disabled={inCart}
             onClick={() => {
               value.addToCart(id);
-              value.openModal(id);
+              value.toggleModal(id);
             }}
           >
             {inCart ? (

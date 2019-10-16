@@ -15,6 +15,6 @@ const CartList = ({ value }) => {
 
 CartList.propTypes = {
   value: PropTypes.object
-}
+};
 
 export default CartList;

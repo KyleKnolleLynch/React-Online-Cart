@@ -22,7 +22,7 @@ const CpuDetails = () => {
           total,
           additionalInfo
         } = value.productDetails;
-        const { addToCart, openModal } = value;
+        const { addToCart, toggleModal } = value;
 
         return (
           <Fragment>
@@ -34,10 +34,10 @@ const CpuDetails = () => {
               <div>
                 <p className='lead'>{info}</p>
                 <h4>{category}</h4>
-                <p className='m'>
-                 {additionalInfo}
-                </p>
-                <h3 className='my-2'>Price: <span>${price}</span></h3>
+                <p className='m'>{additionalInfo}</p>
+                <h3 className='my-2'>
+                  Price: <span>${price}</span>
+                </h3>
                 <h4>Items in cart: {count}</h4>
                 <h3>
                   Cart Total:{' '}
@@ -56,14 +56,12 @@ const CpuDetails = () => {
                   disabled={inCart ? true : false}
                   onClick={() => {
                     addToCart(id);
-                    openModal(id);
+                    toggleModal(id);
                   }}
                 >
                   {inCart ? 'In Cart' : 'Add Item'}
                 </button>
-                <button
-                  className='btn btn-primary m-1 box-shadow tu'
-                >
+                <button className='btn btn-primary m-1 box-shadow tu'>
                   <Link to='./' className='text-white'>
                     To Cpus
                   </Link>

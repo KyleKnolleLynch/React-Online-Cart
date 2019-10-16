@@ -38,6 +38,6 @@ const Cart = ({ history }) => {
 
 Cart.propTypes = {
   history: PropTypes.object
-}
+};
 
 export default Cart;

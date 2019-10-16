@@ -8,8 +8,8 @@ const Modal = () => {
   return (
     <ProductConsumer>
       {value => {
-        const { modalOpen, closeModal } = value;
-        const { img, manufacturer, title, price } = value.modalProduct;
+        const { modalOpen, toggleModal } = value;
+        const { id, img, manufacturer, title, price } = value.modalProduct;
 
         if (modalOpen === false) {
           return null;
@@ -27,14 +27,14 @@ const Modal = () => {
                 <div>
                   <Link
                     to='./cart'
-                    onClick={closeModal}
+                    onClick={() => toggleModal(id)}
                     className='btn-block text-warning my'
                   >
                     Go to Cart
                   </Link>
                   <Link
                     to='./'
-                    onClick={closeModal}
+                    onClick={() => toggleModal(id)}
                     className='btn-block text-primary my'
                   >
                     Continue Shopping

@@ -10,8 +10,7 @@ const CartColumns = () => {
       <p className='tu'>remove item</p>
       <p className='tu'>total</p>
     </div>
-  )
-}
-
+  );
+};
 
 export default CartColumns;

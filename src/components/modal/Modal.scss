@@ -9,6 +9,9 @@
   .modal-card {
     width: 35vw;
     max-width: 20rem;
+    z-index: 2;
+    border: 1px solid $darkColor;
+    background: #e0e0e0;
     img {
       max-width: 200px;
     }
