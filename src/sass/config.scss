@@ -1,6 +1,6 @@
 /* Global Styles*/
-$primaryColor: #22909e;
-$hoverColor: #16616b;
+$primaryColor: #48c2db;
+$hoverColor: #186b7b;
 $darkColor: #333;
 $lightColor: #f4f4f4;
 $whiteColor: #fff;
@@ -389,23 +389,6 @@ table td {
 
 table th {
   background: $lightColor;
-}
-
-/* CSSTransition Group*/
-
-.item-enter {
-  opacity: 0;
-}
-.item-enter-active {
-  opacity: 1;
-  transition: opacity 1000ms ease-in;
-}
-.item-exit {
-  opacity: 1;
-}
-.item-exit-active {
-  opacity: 0;
-  transition: opacity 1000ms ease-in;
 }
 
 @mixin mediaSm {
