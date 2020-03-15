@@ -3,8 +3,6 @@ import { ProductConsumer } from '../../../context/products/ProductContext';
 import { Link } from 'react-router-dom';
 import Title from '../../layout/Title';
 
-import './CpuDetails.scss';
-
 const CpuDetails = () => {
   return (
     <ProductConsumer>

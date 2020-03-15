@@ -1,28 +1,10 @@
-/* Global Styles*/
-$primaryColor: #48c2db;
-$hoverColor: #186b7b;
-$darkColor: #333;
-$lightColor: #f4f4f4;
-$whiteColor: #fff;
-$greyColor: #888;
-$dangerColor: #bb0114;
-$warningColor: #ff9900;
-$successColor: #15b63a;
+@import 'config';
+@import '../components/layout/Navbar';
+@import '../components/modal/Modal';
+@import '../components/pages/Cpu/Cpu';
+@import '../components/pages/CpuDetails/CpuDetails';
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Exo 2', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  background-color: $lightColor;
-  color: $darkColor;
-  overflow-x: hidden;
-}
+/* Utilities*/
 
 a {
   color: $darkColor;
@@ -41,7 +23,6 @@ img {
   width: 100%;
 }
 
-/* Utilities*/
 .container {
   max-width: 1400px;
   margin: auto;
@@ -304,52 +285,38 @@ img {
 .p {
   padding: 0.5rem;
 }
-.p-1 {
-  padding: 1rem;
-}
-.p-2 {
-  padding: 2rem;
-}
-.p-3 {
-  padding: 3rem;
-}
+
 .py {
   padding: 0.5rem 0;
-}
-.py-1 {
-  padding: 1rem 0;
-}
-.py-2 {
-  padding: 2rem 0;
-}
-.py-3 {
-  padding: 3rem 0;
 }
 
 /* Margin */
 .m {
   margin: 0.5rem;
 }
-.m-1 {
-  margin: 1rem;
-}
-.m-2 {
-  margin: 2rem;
-}
-.m-3 {
-  margin: 3rem;
-}
+
 .my {
   margin: 0.5rem 0;
 }
-.my-1 {
-  margin: 1rem 0;
-}
-.my-2 {
-  margin: 2rem 0;
-}
-.my-3 {
-  margin: 3rem 0;
+
+$spaceamounts: (1, 2, 3);
+
+@each $space in $spaceamounts {
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+
+  .py-#{$space} {
+    padding: #{$space}rem 0;
+  }
 }
 
 /* Forms */
@@ -391,25 +358,4 @@ table th {
   background: $lightColor;
 }
 
-@mixin mediaSm {
-  @media screen and (max-width: 460px) {
-    @content;
-  }
-}
-@mixin mediaMd {
-  @media screen and (max-width: 700px) {
-    @content;
-  }
-}
-@mixin mediaLg {
-  @media screen and (max-width: 960px) {
-    @content;
-  }
-}
-@mixin mediaVt {
-  @media screen and (max-height: 500px) {
-    @content;
-  }
-}
-
-@import 'mobile.scss';
+@import 'mobile';

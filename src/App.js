@@ -9,7 +9,7 @@ import Cart from './components/pages/Cart';
 import Modal from './components/modal/Modal';
 import NotFound from './components/pages/NotFound';
 
-import './sass/config.scss';
+import './css/main.css';
 
 const App = () => {
   return (

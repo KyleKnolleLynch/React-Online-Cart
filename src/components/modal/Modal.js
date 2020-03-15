@@ -2,8 +2,6 @@ import React from 'react';
 import { ProductConsumer } from '../../context/products/ProductContext';
 import { Link } from 'react-router-dom';
 
-import './Modal.scss';
-
 const Modal = () => {
   return (
     <ProductConsumer>

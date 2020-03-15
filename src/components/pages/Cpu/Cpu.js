@@ -3,8 +3,6 @@ import { ProductConsumer } from '../../../context/products/ProductContext';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import './Cpu.scss';
-
 const Cpu = ({
   cpu: {
     id,

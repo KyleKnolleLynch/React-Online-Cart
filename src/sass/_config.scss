@@ -1,0 +1,47 @@
+/* Global Styles*/
+$primaryColor: #48c2db;
+$hoverColor: #186b7b;
+$darkColor: #333;
+$lightColor: #f4f4f4;
+$whiteColor: #fff;
+$greyColor: #888;
+$dangerColor: #bb0114;
+$warningColor: #ff9900;
+$successColor: #15b63a;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: $lightColor;
+  color: $darkColor;
+  overflow-x: hidden;
+}
+
+/*  Mobile Styles */
+@mixin mediaSm {
+  @media screen and (max-width: 460px) {
+    @content;
+  }
+}
+@mixin mediaMd {
+  @media screen and (max-width: 700px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media screen and (max-width: 960px) {
+    @content;
+  }
+}
+@mixin mediaVt {
+  @media screen and (max-height: 500px) {
+    @content;
+  }
+}
