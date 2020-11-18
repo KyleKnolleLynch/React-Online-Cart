@@ -1,20 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import CartItem from './CartItem';
+import React from 'react'
+import PropTypes from 'prop-types'
+import CartItem from './CartItem'
 
-const CartList = ({ value }) => {
-  const { cart } = value;
+const CartList = ({ cart }) => {
   return (
     <div>
-      {cart.map(item => (
-        <CartItem key={item.id} item={item} value={value} />
+      {cart.map((item) => (
+        <CartItem key={item.id} item={item} />
       ))}
     </div>
-  );
-};
+  )
+}
 
 CartList.propTypes = {
-  value: PropTypes.object
-};
+  value: PropTypes.object,
+}
 
-export default CartList;
+export default CartList
